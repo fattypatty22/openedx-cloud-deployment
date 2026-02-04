@@ -1,0 +1,3 @@
+DATABASES:
+  mysql:
+    HOST: rds-endpoint
