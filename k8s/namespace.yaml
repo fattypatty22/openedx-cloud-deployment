@@ -2,3 +2,14 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: openedx-prod
+# Kubernetes Manifests
+
+this directory contains Kubernetes resource definitions required
+for deploying OpenEdX components.
+
+resources include:
+- Deployments
+- Services
+- ConfigMaps
+- Secrets
+- Ingress configurations
