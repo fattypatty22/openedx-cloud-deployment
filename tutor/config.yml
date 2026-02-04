@@ -1,3 +1,11 @@
 DATABASES:
   mysql:
     HOST: rds-endpoint
+# Tutor Configuration
+
+Tutor is used as the primary tool to manage OpenEdX deployment.
+
+This directory represents how Tutor is configured to:
+- Use Kubernetes
+- Connect to external databases
+- Manage OpenEdX services
