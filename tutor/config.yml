@@ -1,6 +1,6 @@
 DATABASES:
   mysql:
-    HOST: rds-endpoint
+    HOST: rds endpoint
 # Tutor Configuration
 
 Tutor is used as the primary tool to manage OpenEdX deployment.
