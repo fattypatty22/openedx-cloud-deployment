@@ -7,7 +7,7 @@ scalable, and production grade manner.
 ## High Level Flow
 Users access the platform through a secure HTTPS endpoint.
 Traffic is routed via an ingress controller into the Kubernetes cluster,
-where OpenEdX services are deployed as containerized workloads.
+where OpenenX services are deployed as containerized workloads.
 
 ## Core Components
 - Kubernetes Cluster (EKS  AKS)
