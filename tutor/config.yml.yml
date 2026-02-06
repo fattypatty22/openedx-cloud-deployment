@@ -9,3 +9,7 @@ This directory represents how Tutor is configured to:
 - Use Kubernetes
 - Connect to external databases
 - Manage OpenEdX services
+MYSQL_HOST: openedx-mysql.<region>.rds.amazonaws.com
+MYSQL_USER: openedx_admin
+MYSQL_PASSWORD: 
+

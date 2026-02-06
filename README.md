@@ -1,5 +1,11 @@
 
 # OpenEdX on AWS EKS — Technical Assessment
+## Note
+
+
+!!!!!! Due to AWS credit and quota limitations, some Kubernetes command outputs are representative screenshots to demonstrate 
+expected cluster behavior and configuration.
+
 
 ## 1. Overview
 This repository contains all configuration artifacts, deployment plans, and architectural diagrams for the OpenEdX deployment assessment on AWS EKS.
