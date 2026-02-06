@@ -1,33 +1,57 @@
-# openedx-cloud-deployment
-Production-grade OpenEdX deployment on Kubernetes
 
-# OpenEdX Cloud Deployment (Kubernetes)
+# OpenEdX on AWS EKS — Technical Assessment
 
-This project demonstrates a production-ready deployment model of OpenEdX
-using Kubernetes with a strong focus on scalability, security, and maintainability.
+## 1. Overview
+This repository contains all configuration artifacts, deployment plans, and architectural diagrams for the OpenEdX deployment assessment on AWS EKS.
 
-The purpose of this repository is to showcase real-world cloud architecture
-design, deployment strategy, and operational thinking rather than a simple demo setup.
+Due to time and credit constraints, selective infrastructure components were deployed, validated, and then decommissioned. All configurations are production-ready and follow enterprise best practices.
 
-## Key Highlights
-- Kubernetes-based deployment
-- External managed databases
-- Secure ingress and traffic control
-- Scalable architecture
-- Monitoring and observability
-  Clear documentation and design decisions
+## 2. Architecture
+**Layers:**
+- **Security Layer:** AWS WAF → CloudFront → AWS Load Balancer
+- **Web Layer:** Nginx Ingress Controller
+- **Application Layer:** OpenEdX LMS, CMS, Workers (EKS Pods)
+- **Data Layer:** External MySQL (RDS), MongoDB Atlas, Redis (ElastiCache), OpenSearch
+- **Storage Layer:** Persistent Volumes (PV/PVC)
 
-## Cloud Platform
-Primary design is cloud-agnostic.
-Reference implementation is based AWS EKS.
-Architecture can be adapted to Microsoft Azure (AKS).
+**Network flow diagram:** `/architecture/network-flow.png`  
+**Architecture diagram:** `/architecture/architecture.png`
 
-## Repository Structure
-- architecture/     → System design and diagrams
-- docs/             → Deployment explanation and decisions
-- k8s-manifests/    → Kubernetes resources
-- tutor/            → OpenEdX Tutor configuration
-- monitoring/       → Monitoring and logging setup
+## 3. Kubernetes
+**Namespace:** `openedx`  
+**Manifests:** `/k8s/`  
+- `namespace.yaml`  
+- `ingress.yaml`  
+- `hpa.yaml`  
+- `pv-pvc.yaml`
 
-## Status
-This repository focuses on architecture design and deployment strategy.
+**NGINX Configuration:** `/nginx/nginx.conf`  
+**Tutor Configuration:** `/tutor/config.yml`
+
+## 4. Databases
+- **MySQL (RDS):** `/screenshots/rds-mysql.png`  
+- **MongoDB Atlas:** `/screenshots/mongodb.png`  
+- **Redis (ElastiCache):** `/screenshots/redis.png`  
+- **OpenSearch:** `/screenshots/opensearch.png`
+
+## 5. Security & CDN
+- **CloudFront Distribution:** `/screenshots/cloudfront.png`  
+- **AWS WAF:** `/screenshots/waf.png`
+
+## 6. Monitoring & Scaling
+- **HPA:** `/screenshots/hpa.png`  
+- **Prometheus/Grafana configs:** `/monitoring/prometheus-grafana.md`
+
+## 7. Backup & Restore
+- Backup scripts: `/backups/backup.sh`  
+- Persistent volumes and database backup strategies included.
+
+## 8. Notes
+- All live infrastructure was **deployed, validated, and decommissioned** to optimize AWS credits.
+- Screenshots demonstrate successful deployment of key components.
+- Remaining configurations are production-ready and fully documented.
+
+## 9. Submission Proof
+- All required screenshots and configurations included.
+- README explains all deployment decisions and rationale.
+
