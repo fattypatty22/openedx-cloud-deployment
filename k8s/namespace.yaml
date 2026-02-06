@@ -1,15 +1,11 @@
+
 apiVersion: v1
-kind: Namespace
+kind: PersistentVolumeClaim
 metadata:
-  name: openedx-prod
-# Kubernetes Manifests
-
-this directory contains Kubernetes resource definitions required
-for deploying OpenEdX components.
-
-resources include:
-- Deployments
-- Services
-- ConfigMaps
-- Secrets
-- Ingress configurations
+  name: app-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
