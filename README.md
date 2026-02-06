@@ -6,6 +6,11 @@
 !!!!!! Due to AWS credit and quota limitations, some Kubernetes command outputs are representative screenshots to demonstrate 
 expected cluster behavior and configuration.
 
+# Added for Evaluation
+- AWS CloudFront CDN and AWS WAF (Terraform)
+- Kubernetes Persistent Volume Claim (PVC)
+- Kubernetes Horizontal Pod Autoscaler (HPA)
+
 
 ## 1. Overview
 This repository contains all configuration artifacts, deployment plans, and architectural diagrams for the OpenEdX deployment assessment on AWS EKS.
@@ -60,4 +65,6 @@ Due to time and credit constraints, selective infrastructure components were dep
 ## 9. Submission Proof
 - All required screenshots and configurations included.
 - README explains all deployment decisions and rationale.
+
+
 
